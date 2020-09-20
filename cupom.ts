@@ -13,12 +13,15 @@ let dados = {
   inscricao_estadual: "244.898.500.113"
 };
 
-function imprime_dados_loja() {
+function dados_loja() {
   // Implemente aqui
+  if (dados.nome_loja == "") {
+    throw new Error(`O campo nome da loja é obrigatório`);
+  }
   return "";
 }
 
 module.exports = {
   dados: dados,
-  imprime_dados_loja:  imprime_dados_loja
+  dados_loja:  dados_loja
 };
